@@ -139,14 +139,14 @@ if (isset($_POST['login'])) {
 
     <!-- form itself end-->
     <form id="test-form" class="white-popup-block mfp-hide" method="post" action="">
-        <div class="popup_box ">
+        <div class="popup_box mx-auto d-block">
             <div class="popup_inner">
                 <div class="logo text-center">
                     <a href="#">
                         <img src="assets2/img/form-logo.png" alt="">
                     </a>
                 </div>
-                <h3>Sign in</h3>
+                <h3 class="text-center" >Masuk Untuk Mendaftar</h3>
                 <form action="" method="post"></form>
                         <div class="row">
                             <div class="col-xl-12 col-md-12">
@@ -161,7 +161,7 @@ if (isset($_POST['login'])) {
                         </div>
                     </form>
               
-                <p class="doen_have_acc"><a class="dont-hav-acc" href="#test-form2">Belum Punya Akun PPDB? Ayo Daftar !!</a>
+                <p class="text-center doen_have_acc"><a class="dont-hav-acc" href="#test-form2">Belum Punya Akun PPDB? Ayo Daftar !!</a>
                 </p>
             </div>
         </div>
@@ -169,33 +169,37 @@ if (isset($_POST['login'])) {
 
     <!-- form itself end-->
     <form id="test-form2" class="white-popup-block mfp-hide" action="" method="post">
-        <div class="popup_box ">
+        <div class="popup_box mx-auto d-block">
             <div class="popup_inner">
                 <div class="logo text-center">
                     <a href="#">
                         <img src="assets2/img/form-logo.png" alt="">
                     </a>
                 </div>
-                <h3>Daftar Akun PPDB</h3>
+                <h3 class="text-center">Daftar Akun PPDB</h3>
                     <div class="row">
-                        
-                        <div class="col-xl-12 col-md-12">
-                            <input autocomplete="off" type="text" placeholder="Masukan Nama" name="nama">
+                            <div class="col-md-6">
+                                <input autocomplete="off" type="text" placeholder="Masukan Nama" name="nama">
+                            </div>
+                            <div class="col-md-6">
+                                <input autocomplete="off" type="text" placeholder="Masukan NISN" name="nisn">
+                            </div>
                         </div>
-                        <div class="col-xl-12 col-md-12">
-                            <input autocomplete="off" type="text" placeholder="Masukan NISN" name="nisn">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input autocomplete="off" type="text" placeholder="Masukan Username" name="username">
+                            </div>      
+                            <div class="col-md-6">
+                                <input autocomplete="off" type="email" placeholder="Masukan email" name="email">
+                            </div>
                         </div>
-                        <div class="col-xl-12 col-md-12">
-                            <input autocomplete="off" type="text" placeholder="Masukan Username" name="username">
-                        </div>      
-                        <div class="col-xl-12 col-md-12">
-                            <input autocomplete="off" type="email" placeholder="Masukan email" name="email">
-                        </div>
-                        <div class="col-xl-12 col-md-12">
-                            <input autocomplete="off" type="password" placeholder="Password" name="password">
-                        </div>
-                        <div class="col-xl-12 col-md-12">
-                            <input autocomplete="off" type="Password" placeholder="Confirm password" name="password_confirmation">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input autocomplete="off" type="password" placeholder="Password" name="password">
+                            </div>
+                            <div class="col-md-6">
+                                <input autocomplete="off" type="Password" placeholder="Confirm password" name="password_confirmation">
+                            </div>
                         </div>
                         <div class="col-xl-12">
                             <button type="submit" class="boxed_btn_orange" name="daftar">Daftar</button>
