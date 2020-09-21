@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "ppdb_smk");
+$conn = mysqli_connect("localhost", "root", "", "ppsb_smk");
 
 function query($query) {
     global $conn;
@@ -56,7 +56,7 @@ function register($data) {
     $pw_hash = md5($password);
 
     // Input Data
-    $q_regis = "INSERT INTO user VALUES ('', '$nama', '$nisn', '$username', '$email', '$pw_hash')";
+    $q_regis = "INSERT INTO user VALUES (null, '$nama', '$nisn', '$username', '$email', '$pw_hash')";
     $q_regis2 = mysqli_query($conn, $q_regis);
 
     return mysqli_affected_rows($conn);
