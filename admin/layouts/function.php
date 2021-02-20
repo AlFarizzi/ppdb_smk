@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "ppdb_smk");
+$conn = mysqli_connect("localhost", "root", "root", "ppdb_smk");
 
 function query($query) {
     global $conn;
@@ -19,8 +19,7 @@ function terima($data) {
     $terima_msk = $data['terima_msk'];
 
     for ($i=0; $i < count($id) ; $i++) {
-
-        $data = "SELECT * FROM pendaftar WHERE id = '$id[$i]' ";
+        $data = "SELECT * FROM pendaftar WHERE id_user = '$id[$i]' ";
         $result = mysqli_query($conn, $data);
         $result_fix = mysqli_fetch_assoc($result);
         $nama = $result_fix['nama_lengkap'];
@@ -28,9 +27,9 @@ function terima($data) {
         $nisn = $result_fix['nisn'];
         $sekolah_lama = $result_fix['sekolah_asal']; 
         $jurusan = $terima_msk[$i];   
-        mysqli_query($conn, "INSERT INTO terima VALUES('', '$id_sah', '$nama', '$nisn', '$sekolah_lama', '$jurusan' )");      
-        mysqli_query ($conn, "DELETE FROM pendaftar WHERE id = '$id[$i]' ");
-
+        $insert = mysqli_query($conn, "INSERT INTO terima (id,id_user,nama_lengkap,nisn,sekolah_asal,jurusan) 
+        VALUES(null, '$id_sah', '$nama', '$nisn', '$sekolah_lama', '$jurusan' )");      
+        $delete = mysqli_query ($conn, "DELETE FROM pendaftar WHERE id_user = '$id_sah'");
     }
 
     return mysqli_affected_rows($conn);

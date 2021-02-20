@@ -23,7 +23,7 @@
          
         <td>
           <form action="" method="post">
-            <input type="hidden" name="id_pdtr[]" value="<?php echo $pdtr['id'] ?>">
+            <input type="hidden" name="id_pdtr[]" value="<?php echo $pdtr['id_user'] ?>">
             <div class="form-group">
             <select name="terima_msk[]" id="" class="form-control">
               <?php foreach($jurusan as $jrs) : ?>

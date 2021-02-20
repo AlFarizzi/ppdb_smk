@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "ppsb_smk");
+$conn = mysqli_connect("localhost", "root", "root", "ppdb_smk");
 
 function query($query) {
     global $conn;

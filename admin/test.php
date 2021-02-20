@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "ppdb_smk");
+$conn = mysqli_connect("localhost", "root", "root", "ppdb_smk");
 if (isset($_POST['kirim'])) {
     $nama = $_POST['nama'];
     $jurusan = $_POST['jurusan'];
